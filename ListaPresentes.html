@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes - Maria & João</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Lista de Presentes</h1>
+            <p>Sua contribuição será muito especial para começarmos nossa vida juntos. Escolha um presente que combine
+                com a gente!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Procure por um presente...">
+            <button class="search-btn">Buscar</button>
+        </div>
+
+        <div class="categories">
+            <button class="category-btn active" data-category="todas">Todos</button>
+            <button class="category-btn" data-category="cozinha">Cozinha</button>
+            <button class="category-btn" data-category="quarto">Quarto</button>
+            <button class="category-btn" data-category="sala">Sala</button>
+            <button class="category-btn" data-category="eletrodomésticos">Eletrodomésticos</button>
+            <button class="category-btn" data-category="decoração">Decoração</button>
+            <button class="category-btn" data-category="utensílios">Utensílios</button>
+            <button class="category-btn" data-category="banheiro">Banheiro</button>
+        </div>
+
+        <h2 class="section-title">Nossos Presentes</h2>
+
+        <div class="gift-grid">
+            <!-- Item 1 -->
+            <div class="gift-card" data-category="cozinha">
+                <div class="gift-image">
+                    <img src="/Imagens/Jogo_de_Panelas_Tramontina_Solar_6_Pecas.jpg" alt="Jogo de Panelas">
+                    <div class="gift-status available">Disponível</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Cozinha</span>
+                    <h3 class="gift-name">Jogo de Panelas Tramontina Solar</h3>
+                    <p class="gift-description">Conjunto com 6 peças, perfeitas para o dia a dia na cozinha.</p>
+                    <div class="gift-price">R$ 711,61</div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary"
+                            onclick="openModal('Jogo de Panelas Tramontina')">Presentear</a>
+                        <a href="https://amzn.to/42vWtyC" target="_blank" class="btn btn-outline">Direto no site
+                            Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="gift-card" data-category="cozinha">
+                <div class="gift-image">
+                    <img src="/Imagens/Batedeira_Planetaria_Oster_Black_III_OBAT640_110v.jpg" alt="Batedeira">
+                    <div class="gift-status available">Disponível</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Cozinha</span>
+                    <h3 class="gift-name">Batedeira Planetária Oster Black III, OBAT640, 110v</h3>
+                    <p class="gift-description">Potente liquidificador com 5 velocidades e função pulsar, ideal para
+                        vitaminas e sopas.</p>
+                    <div class="gift-price">R$ 299,00</div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary"
+                            onclick="openModal('Liquidificador Philips Walita')">Presentear</a>
+                        <a href="https://amzn.to/4lvUtPH" target="_blank" class="btn btn-outline">Direto no site
+                            Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="gift-card" data-category="quarto">
+                <div class="gift-image">
+                    <img src="/api/placeholder/400/400" alt="Jogo de Cama">
+                    <div class="gift-status reserved">Reservado</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Quarto</span>
+                    <h3 class="gift-name">Jogo de Cama King Size</h3>
+                    <p class="gift-description">Jogo de cama completo em algodão egípcio 400 fios, macio e durável.</p>
+                    <div class="gift-price">R$ 480,00</div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary"
+                            style="background-color: #ccc; pointer-events: none;">Reservado</a>
+                        <a href="https://example.com/product/125" target="_blank" class="btn btn-outline">Ver
+                            Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="gift-card" data-category="sala">
+                <div class="gift-image">
+                    <img src="/api/placeholder/400/400" alt="Smart TV">
+                    <div class="gift-status partially">Parcialmente</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Sala</span>
+                    <h3 class="gift-name">Smart TV 55" Samsung</h3>
+                    <p class="gift-description">TV 4K com tela QLED, design slim e sistema operacional Tizen.</p>
+                    <div class="gift-price">R$ 3.200,00</div>
+                    <div class="gift-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span>Arrecadado: R$ 2.080,00</span>
+                            <span>65%</span>
+                        </div>
+                    </div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary" onclick="openModal('Smart TV 55\' Samsung')">Contribuir</a>
+                        <a href="https://example.com/product/126" target="_blank" class="btn btn-outline">Ver
+                            Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="gift-card"data-category="banheiro">
+                <div class="gift-image">
+                    <img src="/api/placeholder/400/400" alt="Jogo de Toalhas">
+                    <div class="gift-status available">Disponível</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Banheiro</span>
+                    <h3 class="gift-name">Jogo de Toalhas Buddemeyer</h3>
+                    <p class="gift-description">Conjunto com 4 toalhas de banho e 4 de rosto em algodão premium.</p>
+                    <div class="gift-price">R$ 350,00</div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary"
+                            onclick="openModal('Jogo de Toalhas Buddemeyer')">Presentear</a>
+                        <a href="https://example.com/product/127" target="_blank" class="btn btn-outline">Ver
+                            Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="gift-card" data-category="eletrodomésticos">
+                <div class="gift-image">
+                    <img src="/Imagens/Robo_Aspirador_Neatsvor_X600_Pro.jpg" alt="Robô Aspirador">
+                    <div class="gift-status available">Disponível</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Eletrodomésticos</span>
+                    <h3 class="gift-name">Robô Aspirador Neatsvor</h3>
+                    <p class="gift-description">Robo Aspirador Neatsvor X600 Pro com Mapeamento Inteligente</p>
+                    <div class="gift-price">R$ 1774,00</div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary"
+                            onclick="openModal('Robô Aspirador Neatsvor')">Presentear</a>
+                        <a href="https://amzn.to/4ib6O93" target="_blank" class="btn btn-outline">Direto no site
+                            Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="gift-card" data-category="cozinha">
+                <div class="gift-image">
+                    <img src="/api/placeholder/400/400" alt="Mixer">
+                    <div class="gift-status available">Disponível</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Cozinha</span>
+                    <h3 class="gift-name">Mixer Philco</h3>
+                    <p class="gift-description">Mixer com potência de 400W e lâminas em aço inoxidável.</p>
+                    <div class="gift-price">R$ 120,00</div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary" onclick="openModal('Mixer Philco')">Presentear</a>
+                        <a href="https://example.com/product/129" target="_blank" class="btn btn-outline">Ver
+                            Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="gift-card" data-category="sala">
+                <div class="gift-image">
+                    <img src="/api/placeholder/400/400" alt="Conjunto de Sofá">
+                    <div class="gift-status partially">Parcialmente</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Sala</span>
+                    <h3 class="gift-name">Conjunto de Sofá 3 e 2 Lugares</h3>
+                    <p class="gift-description">Sofá moderno em tecido suede com pés em madeira maciça.</p>
+                    <div class="gift-price">R$ 4.800,00</div>
+                    <div class="gift-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span>Arrecadado: R$ 1.920,00</span>
+                            <span>40%</span>
+                        </div>
+                    </div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary"
+                            onclick="openModal('Conjunto de Sofá 3 e 2 Lugares')">Contribuir</a>
+                        <a href="https://example.com/product/130" target="_blank" class="btn btn-outline">Ver
+                            Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Item 9 -->
+            <div class="gift-card" data-category="sala">
+                <div class="gift-image">
+                    <img src="/api/placeholder/400/400" alt="Conjunto de Sofá">
+                    <div class="gift-status partially">Parcialmente</div>
+                </div>
+                <div class="gift-info">
+                    <span class="gift-tag">Sala</span>
+                    <h3 class="gift-name">Conjunto de ...</h3>
+                    <p class="gift-description">texto decrição....</p>
+                    <div class="gift-price">R$ 5.000,00</div>
+                    <div class="gift-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <!tem que corrigir o progresso>
+                        <div class="progress-text">
+                            <span>Arrecadado: R$ 1.020,00</span>
+                            <span>40%</span>
+                        </div>
+                    </div>
+                    <div class="gift-actions">
+                        <a href="#" class="btn btn-primary"
+                            onclick="openModal('Conjunto de Sofá 3 e 2 Lugares')">Contribuir</a>
+                        <a href="https://example.com/product/130" target="_blank" class="btn btn-outline">Ver
+                            Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Itens restantes... -->
+        </div>
+    </main>
+
+    <!-- Modal de Presentear -->
+    <div id="giftModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title">Presentear: <span id="modalGiftName"></span></h2>
+            <form id="giftForm">
+                <div class="form-group">
+                    <label for="name">Seu Nome</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Seu E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem (opcional)</label>
+                    <input type="text" id="message" name="message">
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Forma de Pagamento</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="credit">Cartão de Crédito</option>
+                        <option value="pix">PIX</option>
+                        <option value="bank">Transferência Bancária</option>
+                        <option value="physical">Entrega Física</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Confirmar Presente</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Biatriz & Gregory - Casamento: 24 de Outubro de 2026</p>
+            <div class="footer-links">
+                <a href="/index.html">Voltar ao Site do Casamento</a>
+                <a href="#">Contato</a>
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
