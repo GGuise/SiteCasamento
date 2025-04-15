@@ -45,16 +45,21 @@ const countdown = setInterval(function () {
     const nowDate = new Date();
     const futureDate = new Date(weddingDate);
 
-    // Calcula a diferença em meses entre as datas
+    // Calcular diferença em meses
     let months = (futureDate.getFullYear() - nowDate.getFullYear()) * 12;
     months += futureDate.getMonth() - nowDate.getMonth();
 
-    // Ajuste se o dia atual for maior que o dia do futuro
+    // Ajuste se o dia atual for maior que o dia futuro (ainda não completou o mês)
     if (futureDate.getDate() < nowDate.getDate()) {
         months--;
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    // Criar uma data intermediária que representa o "marco" do mês atual até o casamento
+    let intermediateDate = new Date(nowDate.getFullYear(), nowDate.getMonth() + months, nowDate.getDate());
+    let timeUntilIntermediate = futureDate - intermediateDate;
+
+    // Dias restantes dentro do mês atual
+    const days = Math.floor(timeUntilIntermediate / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
