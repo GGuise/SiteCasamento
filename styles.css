@@ -151,7 +151,8 @@ nav ul li a:hover {
 .countdown span {
     font-size: 2rem; /* Número maior */
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
+    padding: 5px;
 }
 
 .countdown-item {
