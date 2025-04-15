@@ -83,21 +83,50 @@ document.querySelector('.search-input').addEventListener('keypress', function (e
 });
 
 //script para modal reserva
+//Script para abrir/fechar e redirecionar:
 let selectedGiftName = '';
-let redirectLink = '';
+let reservationLink = '';
 
-function openReservationModal(giftName, link) {
-    selectedGiftName = giftName;
-    redirectLink = link;
-
-    document.getElementById("reservationGiftName").innerText = giftName;
-    document.getElementById("reservationModal").style.display = "block";
+function openReservationModal(itemName, link) {
+    document.getElementById("modalReserveName").innerText = itemName;
+    document.getElementById("reserveModal").style.display = "block";
+    reservationLink = link; // Armazena o link para redirecionar após o envio
 }
+
+function closeReserveModal() {
+    document.getElementById("reserveModal").style.display = "none";
+}
+
 
 function closeReservationModal() {
     document.getElementById("reservationModal").style.display = "none";
 }
 
+//Script do envio do formulário (simples, com redirecionamento opcional)
+document.getElementById("reserveForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Aqui você pode capturar os dados e enviar para onde quiser (e-mail, banco etc.)
+
+    alert("Reserva confirmada! ❤️ Obrigado!");
+
+    // Redireciona para o link (Amazon) se tiver um
+    if (reservationLink) {
+        window.open(reservationLink, "_blank");
+    }
+
+    closeReserveModal();
+});
+
+
+
+
+
+
+
+
+//
+/*
 document.getElementById("reservationForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -106,3 +135,4 @@ document.getElementById("reservationForm").addEventListener("submit", function (
     // Redireciona após o preenchimento do formulário
     window.location.href = redirectLink;
 });
+*/
