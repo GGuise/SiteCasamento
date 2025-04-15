@@ -91,10 +91,10 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('/api/placeholder/1200/600');
+    background-image: url('banner_site_footer10x2cm.png');
     background-size: cover;
     background-position: center;
-    height: 600px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
