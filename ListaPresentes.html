@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Presentes - Maria & João</title>
+    <title>Lista de Presentes - Biatriz e Gregory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles2.css">
 </head>
 
@@ -25,7 +26,6 @@
 
         <div class="categories">
             <button class="category-btn active" data-category="todas">Todos</button>
-            <button class="category-btn" data-category="taxa">Taxa</button>
             <button class="category-btn" data-category="cozinha">Cozinha</button>
             <button class="category-btn" data-category="quarto">Quarto</button>
             <button class="category-btn" data-category="sala">Sala</button>
@@ -37,7 +37,7 @@
 
         <h2 class="section-title">Nossos Presentes</h2>
 
-        <div class="gift-grid">
+        <div class="gift-grid" id="gift-grid">
             <!-- Item 1 -->
             <div class="gift-card" data-category="cozinha">
                 <div class="gift-image">
@@ -52,11 +52,8 @@
                     <div class="gift-actions">
                         <a href="#" class="btn btn-primary"
                             onclick="openModal('Jogo de Panelas Tramontina')">Presentear</a>
-                       <!--<a href="https://amzn.to/42vWtyC" target="_blank" class="btn btn-outline">Direto no site
-                            Amazon</a>-->
-                        <a href="#" class="btn btn-primary"
-                            onclick="openReservationModal('Nome do Presente', 'https://amzn.to/42vWtyC')">Reservar direto no site Amazon</a>
-
+                        <a href="https://amzn.to/42vWtyC" target="_blank" class="btn btn-outline">Direto no site
+                            Amazon</a>
                     </div>
                 </div>
             </div>
@@ -133,7 +130,7 @@
             <!-- Item 5 -->
             <div class="gift-card" data-category="banheiro">
                 <div class="gift-image">
-                    <img src="Cadeira.jpg" alt="Jogo de Toalhas">
+                    <img src="/api/placeholder/400/400" alt="Jogo de Toalhas">
                     <div class="gift-status available">Disponível</div>
                 </div>
                 <div class="gift-info">
@@ -250,42 +247,12 @@
                 </div>
             </div>
 
-            <!-- Item 10 -->
-            <div class="gift-card" data-category="cozinha">
-                <div class="gift-image">
-                    <img src="noivadabuque.png" alt="ValePresente">
-                    <div class="gift-status available">Disponível</div>
-                </div>
-                <div class="gift-info">
-                    <span class="gift-tag">Vale Presente</span>
-                    <h3 class="gift-name">Taxa para noiva não jogar o  buquê para sua namorada</h3>
-                    <p class="gift-description">A noiva não irá mirar para sua namorada, mas se ela pegar terá que se casar!</p>
-                    <div class="gift-price">R$ 120,00</div>
-                    <div class="gift-actions">
-                        <a href="#" class="btn btn-primary" onclick="openModal('Mixer Philco')">Presentear</a>
-                        <a href="https://example.com/product/129" target="_blank" class="btn btn-outline">Ver
-                            Detalhes</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 11 -->
-            <div class="gift-card" data-category="cozinha">
-                <div class="gift-image">
-                    <img src="/api/placeholder/400/400" alt="Mixer">
-                    <div class="gift-status available">Disponível</div>
-                </div>
-                <div class="gift-info">
-                    <span class="gift-tag">Cozinha</span>
-                    <h3 class="gift-name">Mixer Philco</h3>
-                    <p class="gift-description">Mixer com potência de 400W e lâminas em aço inoxidável.</p>
-                    <div class="gift-price">R$ 120,00</div>
-                    <div class="gift-actions">
-                        <a href="#" class="btn btn-primary" onclick="openModal('Mixer Philco')">Presentear</a>
-                        <a href="https://example.com/product/129" target="_blank" class="btn btn-outline">Ver
-                            Detalhes</a>
-                    </div>
-                </div>
-            </div>
+
+
+            <!-- Item 10,11,12... -->
+            
+            <div class="gift-list-container"></div>
+
 
 
             <!-- Itens restantes... -->
@@ -325,34 +292,13 @@
         </div>
     </div>
 
-    <!--Modal formulário de reserva-->
-    <!-- Modal de Reservar -->
-    <div id="reservationModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeReservationModal()">&times;</span>
-            <h2 class="modal-title">Reservar Presente: <span id="reservationGiftName"></span></h2>
-            <form id="reservationForm">
-                <div class="form-group">
-                    <label for="reserverName">Seu Nome</label>
-                    <input type="text" id="reserverName" name="reserverName" required>
-                </div>
-                <div class="form-group">
-                    <label for="reserverEmail">Seu E-mail</label>
-                    <input type="email" id="reserverEmail" name="reserverEmail" required>
-                </div>
-                <button type="submit" class="submit-btn">Reservar</button>
-            </form>
-        </div>
-    </div>
-
-
     <footer>
         <div class="container">
             <p>Biatriz & Gregory - Casamento: 24 de Outubro de 2026</p>
             <div class="footer-links">
-                <a href="index.html">Voltar ao Site do Casamento</a>
-                <a href="#">Contato</a>
-                <a href="#">Política de Privacidade</a>
+                <a href="index.html">VOLTAR AO SITE DO CASAMENTO</a>
+                <a href="#">CONTATO</a>
+                <a href="#">POLÍTICA DE PRIVACIDADE</a>
             </div>
         </div>
     </footer>
