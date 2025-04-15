@@ -1,15 +1,15 @@
-Cores top-banner
-*/ .top-banner {
+/* Cores top-banner*/
+/*Estilos para o top-banner*/ 
+.top-banner-container {
+    text-align: center;
+}
+
+.top-banner {
     display: block;
-    max-width: 300px;
-    /* ou 200px, se quiser ainda menor */
-    max-width: auto;
-    height: auto;
-    margin: 0 auto 1px auto;
-    padding-top: 1px;
-    background-color: #ffffff;
-
-
+    width: 100%;
+    max-height: 400px; /* aumenta a altura máxima */
+    object-fit: cover;
+    margin: 0 auto;
 }
 
 
