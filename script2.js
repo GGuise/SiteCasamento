@@ -30,28 +30,6 @@ document.getElementById('giftForm').addEventListener('submit', function (e) {
     closeModal();
 });
 
-// Filtro por categoria (com normalização)
-/* const categoryButtons = document.querySelectorAll('.category-btn');
-const giftCards = document.querySelectorAll('.gift-card');
-
-categoryButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        categoryButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-
-        const selectedCategory = normalize(this.getAttribute('data-category'));
-
-        giftCards.forEach(card => {
-            const cardCategory = normalize(card.getAttribute('data-category'));
-            if (selectedCategory === 'todas' || selectedCategory === cardCategory) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    });
-});
-*/
 
 // Script para filtrar presentes por categoria
 const categoryButtons = document.querySelectorAll('.category-btn');
@@ -128,4 +106,3 @@ document.getElementById("reservationForm").addEventListener("submit", function (
     // Redireciona após o preenchimento do formulário
     window.location.href = redirectLink;
 });
-
