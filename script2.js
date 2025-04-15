@@ -1,5 +1,5 @@
 // Função para normalizar strings (remove acentos e converte para minúsculas)
-function normalize(str) { 
+function normalize(str) {
     return str
         .toLowerCase()
         .normalize("NFD")
@@ -17,14 +17,14 @@ function closeModal() {
 }
 
 // Close modal when clicking outside
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == document.getElementById('giftModal')) {
         closeModal();
     }
 };
 
 // Form submission
-document.getElementById('giftForm').addEventListener('submit', function(e) {
+document.getElementById('giftForm').addEventListener('submit', function (e) {
     e.preventDefault();
     alert('Obrigado por seu presente! Entraremos em contato em breve com instruções para finalização.');
     closeModal();
@@ -58,7 +58,7 @@ const categoryButtons = document.querySelectorAll('.category-btn');
 const giftCards = document.querySelectorAll('.gift-card');
 
 categoryButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         // Remover a classe 'active' de todos os botões
         categoryButtons.forEach(btn => btn.classList.remove('active'));
         // Adicionar a classe 'active' ao botão clicado
@@ -103,3 +103,29 @@ document.querySelector('.search-input').addEventListener('keypress', function (e
         document.querySelector('.search-btn').click();
     }
 });
+
+//script para modal reserva
+let selectedGiftName = '';
+let redirectLink = '';
+
+function openReservationModal(giftName, link) {
+    selectedGiftName = giftName;
+    redirectLink = link;
+
+    document.getElementById("reservationGiftName").innerText = giftName;
+    document.getElementById("reservationModal").style.display = "block";
+}
+
+function closeReservationModal() {
+    document.getElementById("reservationModal").style.display = "none";
+}
+
+document.getElementById("reservationForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Aqui você pode validar os dados ou até armazená-los via backend se quiser
+
+    // Redireciona após o preenchimento do formulário
+    window.location.href = redirectLink;
+});
+
