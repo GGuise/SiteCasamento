@@ -13,6 +13,7 @@
 }
 
 
+
 /* Variáveis de cores */
 
 :root {
@@ -132,17 +133,35 @@ nav ul li a:hover {
 .countdown {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    font-size: 2rem; /* Aumente se quiser mais destaque */
+    color: #fff; /* Ou outra cor que combine com seu fundo */
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.countdown span {
+    font-size: 2rem; /* Número maior */
+    display: block;
+    margin-bottom: 4px;
 }
 
 .countdown-item {
-    margin: 0 15px;
+    margin: 0 30px;
     text-align: center;
 }
 
 .countdown-item span {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
