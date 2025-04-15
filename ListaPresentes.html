@@ -341,29 +341,29 @@
     </div>
 
 
-    <!-- Modal de Reservar -->
-    <!-- Modal de Reservar -->
-    <div id="reserveModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeReserveModal()">&times;</span>
-            <h2 class="modal-title">Reservar: <span id="modalReserveName"></span></h2>
-            <form id="reserveForm">
-                <div class="form-group">
-                    <label for="reserverName">Seu Nome</label>
-                    <input type="text" id="reserverName" name="reserverName" required>
-                </div>
-                <div class="form-group">
-                    <label for="reserverEmail">Seu E-mail</label>
-                    <input type="email" id="reserverEmail" name="reserverEmail" required>
-                </div>
-                <div class="form-group">
-                    <label for="reserverMessage">Mensagem (opcional)</label>
-                    <input type="text" id="reserverMessage" name="reserverMessage">
-                </div>
-                <button type="submit" class="submit-btn">Confirmar Reserva</button>
-            </form>
-        </div>
+<!-- Modal de Reservar -->
+<div id="reserveModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeReserveModal()">&times;</span>
+        <h2 class="modal-title">Reservar: <span id="modalReserveName"></span></h2>
+        <form id="reserveForm">
+            <div class="form-group">
+                <label for="reserverName">Seu Nome</label>
+                <input type="text" id="reserverName" name="reserverName" required>
+            </div>
+            <div class="form-group">
+                <label for="reserverEmail">Seu E-mail</label>
+                <input type="email" id="reserverEmail" name="reserverEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="reserverMessage">Mensagem (opcional)</label>
+                <textarea id="reserverMessage" name="reserverMessage" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Confirmar Reserva</button>
+        </form>
     </div>
+</div>
+
 
 
 
